@@ -138,11 +138,19 @@ section{
 }
 
 @media(max-width:900px){
+ .header{
+    padding:20px 0;
+  }
+
+   .navbar{
+    padding:10px 5%;
+  
+  }
 
   .nav-links{
     background:#111;
     position:absolute;
-    top:100%;
+     top:50px;
     right:-250px;
     width:250px;
     padding:30px;
