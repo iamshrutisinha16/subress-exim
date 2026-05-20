@@ -1720,7 +1720,7 @@ section{
   font-size:18px;
 }
 
-/* ================= CONTACT ================= */
+/* ================= CONTACT SECTION ================= */
 
 .contact-section{
   padding:120px 7%;
@@ -1730,23 +1730,31 @@ section{
   align-items:center;
 }
 
+/* LEFT SIDE */
+
 .small-title{
   color:#ff6b35;
+  font-size:15px;
   font-weight:700;
   letter-spacing:1px;
+  text-transform:uppercase;
 }
 
 .contact-left h2{
   font-size:50px;
-  margin:20px 0;
+  line-height:1.2;
+  margin:18px 0;
   color:#111;
 }
 
 .contact-left p{
   color:#666;
-  line-height:1.6;
+  line-height:1.7;
   margin-bottom:25px;
+  font-size:16px;
 }
+
+/* CONTACT INFO */
 
 .contact-info{
   display:flex;
@@ -1755,67 +1763,78 @@ section{
   margin-top:40px;
 }
 
+/* CONTACT BOX */
 .contact-box{
   display:flex;
-  gap:20px;
-  align-items:flex-start;
+  align-items:center;
+  gap:18px;
+
   padding:25px;
-  border-radius:25px;
   background:#fff;
-  box-shadow:0 10px 40px rgba(0,0,0,.08);
+  border-radius:20px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+
   text-decoration:none;
   color:#111;
-  transition:.4s;
 }
 
-.contact-box:hover{
-  transform:translateY(-8px);
-}
-
+/* ICON WRAPPER */
 .icon{
-  width:70px;
-  height:70px;
-  line-height:70px;
-  text-align:center;
-  border-radius:50%;
+  width:58px;
+  height:58px;
+  min-width:58px;
+
   background:#ff6b35;
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex:0 0 58px;   /* 🔥 IMPORTANT FIX */
+}
+
+/* ICON */
+.icon i{
+  font-size:20px;
   color:#fff;
-  font-size:26px;
-  min-width:70px;
+
+  display:block;
+  margin:0;
+  padding:0;
+  line-height:1;
+}
+
+.contact-box div{
+  flex:1;
 }
 
 .contact-box h4{
-  font-size:24px;
-  margin-bottom:10px;
+  margin:0 0 8px;
+  font-size:22px;
+  line-height:1.2;
 }
 
 .contact-box p{
   margin:0;
+  line-height:1.6;
+  color:#666;
 }
 
-/* ================= SOCIAL ================= */
+/* ================= SOCIAL LINKS ================= */
 
 .social-links{
   display:flex;
+  align-items:center;
   gap:18px;
   margin-top:40px;
 }
 
 .social-links a{
-  width:55px;
-  height:55px;
-  line-height:52px;
-  text-align:center;
-  border-radius:50%;
-  background:#111827;
-  color:#fff;
-  font-size:18px;
-  transition:.4s;
-}
-
-.social-links i{
   width:58px;
   height:58px;
+
   border-radius:50%;
   background:#111827;
   color:#fff;
@@ -1824,14 +1843,10 @@ section{
   align-items:center;
   justify-content:center;
 
-  font-size:22px;
-  transition:.35s ease;
-  cursor:pointer;
-}
+  text-decoration:none;
+  font-size:20px;
 
-.social-links i:hover{
-  background:#ff6b35;
-  transform:translateY(-5px);
+  transition:.35s ease;
 }
 
 .social-links a:hover{
@@ -1839,6 +1854,50 @@ section{
   transform:translateY(-5px);
 }
 
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+  .contact-section{
+    grid-template-columns:1fr;
+    gap:50px;
+    padding:90px 6%;
+  }
+
+  .contact-left h2{
+    font-size:36px;
+  }
+
+  .contact-box{
+    padding:20px;
+  }
+
+  .icon{
+    width:60px;
+    height:60px;
+    min-width:60px;
+    font-size:22px;
+  }
+
+  .contact-box h4{
+    font-size:18px;
+  }
+
+  .contact-box p{
+    font-size:14px;
+  }
+
+  .social-links{
+    flex-wrap:wrap;
+  }
+
+  .social-links a{
+    width:52px;
+    height:52px;
+    font-size:18px;
+  }
+
+}
 /* ================= MAP ================= */
 
 .contact-right iframe{
